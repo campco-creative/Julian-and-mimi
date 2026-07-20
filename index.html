@@ -173,6 +173,8 @@
   }
   .film-thumb iframe.playing { display: block; }
   .film-thumb.playing .thumb-overlay { opacity: 0; pointer-events: none; }
+  .film-thumb.playing { pointer-events: none; }
+  .film-thumb iframe.playing { pointer-events: auto; }
 
   /* Meta row */
   .film-meta {
@@ -253,8 +255,8 @@
 
     <!-- Film 1 -->
     <div class="film-card">
-      <div class="film-thumb" id="thumb-1" onclick="playVideo(1, '1vCj4E-QvSGYFFEHI6fFL8YuSI76HNTqU')" style="background-image: url('highlight.jpg'); background-size: cover; background-position: center;">
-        <div class="thumb-overlay">
+      <div class="film-thumb" id="thumb-1" style="background-image: url('highlight.jpg'); background-size: cover; background-position: center;">
+        <div class="thumb-overlay" onclick="playVideo(1, '1vCj4E-QvSGYFFEHI6fFL8YuSI76HNTqU')">
           <span class="film-number">01</span>
           <div class="play-btn"><div class="play-icon"></div></div>
         </div>
@@ -271,8 +273,8 @@
 
     <!-- Film 2 -->
     <div class="film-card">
-      <div class="film-thumb" id="thumb-2" onclick="playVideo(2, '1-hVi2E4sB6wD4WXzZhuJSyl-oY0lIyPU')" style="background-image: url('ceremony.jpg'); background-size: cover; background-position: center;">
-        <div class="thumb-overlay">
+      <div class="film-thumb" id="thumb-2" style="background-image: url('ceremony.jpg'); background-size: cover; background-position: center;">
+        <div class="thumb-overlay" onclick="playVideo(2, '1-hVi2E4sB6wD4WXzZhuJSyl-oY0lIyPU')">
           <span class="film-number">02</span>
           <div class="play-btn"><div class="play-icon"></div></div>
         </div>
@@ -289,8 +291,8 @@
 
     <!-- Film 3 -->
     <div class="film-card">
-      <div class="film-thumb" id="thumb-3" onclick="playVideo(3, '1uhIUUGpe09LHShgHzuVHGBXoTfNlRwG_')" style="background-image: url('best-man.jpg'); background-size: cover; background-position: center;">
-        <div class="thumb-overlay">
+      <div class="film-thumb" id="thumb-3" style="background-image: url('best-man.jpg'); background-size: cover; background-position: center;">
+        <div class="thumb-overlay" onclick="playVideo(3, '1uhIUUGpe09LHShgHzuVHGBXoTfNlRwG_')">
           <span class="film-number">03</span>
           <div class="play-btn"><div class="play-icon"></div></div>
         </div>
@@ -307,8 +309,8 @@
 
     <!-- Film 4 -->
     <div class="film-card">
-      <div class="film-thumb" id="thumb-4" onclick="playVideo(4, '138WwUbqTnS7j8bNNQ6CfjkmyzH7t9Dbw')" style="background-image: url('maid-of-honor.jpg'); background-size: cover; background-position: center;">
-        <div class="thumb-overlay">
+      <div class="film-thumb" id="thumb-4" style="background-image: url('maid-of-honor.jpg'); background-size: cover; background-position: center;">
+        <div class="thumb-overlay" onclick="playVideo(4, '138WwUbqTnS7j8bNNQ6CfjkmyzH7t9Dbw')">
           <span class="film-number">04</span>
           <div class="play-btn"><div class="play-icon"></div></div>
         </div>
@@ -325,8 +327,8 @@
 
     <!-- Film 5 -->
     <div class="film-card">
-      <div class="film-thumb" id="thumb-5" onclick="playVideo(5, '1FO94qNDXXQ5vad1xXrvJ93NWdu0FPqD6')" style="background-image: url('fathers.jpg'); background-size: cover; background-position: center;">
-        <div class="thumb-overlay">
+      <div class="film-thumb" id="thumb-5" style="background-image: url('fathers.jpg'); background-size: cover; background-position: center;">
+        <div class="thumb-overlay" onclick="playVideo(5, '1FO94qNDXXQ5vad1xXrvJ93NWdu0FPqD6')">
           <span class="film-number">05</span>
           <div class="play-btn"><div class="play-icon"></div></div>
         </div>
@@ -343,8 +345,8 @@
 
     <!-- Film 6 -->
     <div class="film-card">
-      <div class="film-thumb" id="thumb-6" onclick="playVideo(6, '1Yo4dxznxa7Yx7rZ1Y2oMD-SeqDoNCi2P')" style="background-image: url('bouquet.jpg'); background-size: cover; background-position: center;">
-        <div class="thumb-overlay">
+      <div class="film-thumb" id="thumb-6" style="background-image: url('bouquet.jpg'); background-size: cover; background-position: center;">
+        <div class="thumb-overlay" onclick="playVideo(6, '1Yo4dxznxa7Yx7rZ1Y2oMD-SeqDoNCi2P')">
           <span class="film-number">06</span>
           <div class="play-btn"><div class="play-icon"></div></div>
         </div>
