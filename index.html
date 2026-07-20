@@ -367,12 +367,23 @@
 
 <script>
   function playVideo(id, fileId) {
-    var thumb = document.getElementById('thumb-' + id);
-    var iframe = document.getElementById('video-' + id);
     if (fileId.indexOf('REPLACE') !== -1) {
       alert('This video link hasn\u2019t been set up yet. Replace REPLACE_WITH_FILE_ID_' + id + ' with the Google Drive file ID.');
       return;
     }
+
+    // Google Drive's inline "/preview" embed frequently renders as a black
+    // frame with no usable controls on mobile Safari/Chrome. Its full "/view"
+    // page is the real, mobile-optimized player, so phones/tablets get sent
+    // there directly instead of trying (and failing) to play inline.
+    var isMobile = /iPhone|iPad|iPod|Android/i.test(navigator.userAgent);
+    if (isMobile) {
+      window.open('https://drive.google.com/file/d/' + fileId + '/view', '_blank');
+      return;
+    }
+
+    var thumb = document.getElementById('thumb-' + id);
+    var iframe = document.getElementById('video-' + id);
     thumb.classList.add('playing');
     iframe.src = 'https://drive.google.com/file/d/' + fileId + '/preview?autoplay=1';
     iframe.classList.add('playing');
